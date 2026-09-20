@@ -35,7 +35,7 @@ public class ChatUtil {
     }
 
     public static Component getClientNameComponent() {
-        return Component.empty().withColor(OyVey.colorManager.getColorAsInt()).append("OyVey");
+        return Component.empty().withColor(OyVey.colorManager.getColorAsInt()).append(me.alpha432.oyvey.util.BuildConfig.NAME);
     }
 
     private static GuiMessageTag getMessageTag() {

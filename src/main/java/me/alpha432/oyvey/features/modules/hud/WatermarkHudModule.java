@@ -19,8 +19,18 @@ public class WatermarkHudModule extends HudModule {
     }
 
     @Override
+    public void onLoad() {
+        if (text.getValue() == null || text.getValue().equalsIgnoreCase("OyVey") || text.getValue().isEmpty()) {
+            text.setValue(BuildConfig.NAME);
+        }
+    }
+
+    @Override
     protected void render(Render2DEvent e) {
         super.render(e);
+        if (text.getValue() == null || text.getValue().equalsIgnoreCase("OyVey") || text.getValue().isEmpty()) {
+            text.setValue(BuildConfig.NAME);
+        }
         String watermarkString = "{global} %s {} %s";
         if (fullVersion.getValue() && BuildConfig.USING_GIT) {
             watermarkString += "/" + BuildConfig.BRANCH + "-" + BuildConfig.HASH;

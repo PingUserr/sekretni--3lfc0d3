@@ -57,6 +57,7 @@ public class OyVey implements ModInitializer, ClientModInitializer {
         friendManager.init();
 
         configManager.load();
+        moduleManager.onLoad();
         colorManager.init();
         fontManager.init();
         Runtime.getRuntime().addShutdownHook(new Thread(() -> configManager.save()));
