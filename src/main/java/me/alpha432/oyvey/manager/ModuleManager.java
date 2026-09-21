@@ -65,6 +65,7 @@ public class ModuleManager implements Jsonable, Util {
         register(new VelocityModule());
         register(new AutoSwapModule());
         register(new ESPModule());
+        register(new ElytraSwapModule());
         register(new BlockHighlightModule());
         register(new NoFallModule());
         register(new KeyPearlModule());

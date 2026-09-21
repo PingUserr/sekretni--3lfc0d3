@@ -48,13 +48,7 @@ public class AutoSwapModule extends Module {
         }
 
         if (phase == 2) {
-            mc.gameMode.handleInventoryMouseClick(
-                    mc.player.containerMenu.containerId,
-                    targetSlot,
-                    40,
-                    ClickType.SWAP,
-                    mc.player
-            );
+            mc.gameMode.handleInventoryMouseClick(mc.player.containerMenu.containerId, targetSlot, 40, ClickType.SWAP, mc.player);
             phase = 3;
             return;
         }

@@ -1,6 +1,7 @@
 package me.alpha432.oyvey.features.modules.combat;
 
 import me.alpha432.oyvey.event.impl.render.Render2DEvent;
+import me.alpha432.oyvey.event.impl.render.Render3DEvent;
 import me.alpha432.oyvey.features.modules.Module;
 import me.alpha432.oyvey.features.settings.Setting;
 import net.minecraft.client.player.LocalPlayer;
