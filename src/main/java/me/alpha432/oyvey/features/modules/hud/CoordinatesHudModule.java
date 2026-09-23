@@ -6,6 +6,7 @@ import me.alpha432.oyvey.features.modules.client.HudModule;
 import me.alpha432.oyvey.features.settings.Setting;
 
 public class CoordinatesHudModule extends HudModule {
+
     public Setting<Boolean> nether = bool("Nether", false);
 
     public CoordinatesHudModule() {
@@ -17,6 +18,8 @@ public class CoordinatesHudModule extends HudModule {
         super.render(e);
 
         if (nullCheck()) return;
+
+        int color = nether.getValue() ? 0xFFFF0000 : 0xFFFFFFFF;
 
         String coordsStr = String.format("X: %d Y: %d Z: %d",
                 mc.player.getBlockX(),
@@ -33,8 +36,7 @@ public class CoordinatesHudModule extends HudModule {
             coordsStr += String.format(" [%d, %d]", netherX, netherZ);
         }
 
-        OyVey.fontManager.drawString(e.getContext(), coordsStr,
-                getX(), getY(), -1);
+        OyVey.fontManager.drawString(e.getContext(), coordsStr, getX(), getY(), -1);
 
         setWidth(OyVey.fontManager.getStringWidth(coordsStr));
         setHeight(OyVey.fontManager.getFontHeight());
